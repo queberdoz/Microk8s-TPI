@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost-deployment      #Nom du déploiement
+spec:
+  strategy:
+    type: RollingUpdate       #Type de mise à jour
+    rollingUpdate:
+       maxSurge: 1            #Nombre maximum de pod qui peut être lancé en plus par rapport au nombre de replicas
+       maxUnavailable: 0      #Nombre maximum de pod qui peuvent être indisponible par rapport au nombre de replicas
+  replicas: 3 			          #Nombre de pod identique à déployer
+  selector:
+    matchLabels:
+      app: ghost		          #Définit quel nom de pod, le déploiement doit géré
+  template:
+    metadata:
+      labels:
+        app: ghost		        #Nom du pod
+    spec:
+      containers:
+      - name: ghost		        #Nom du container
+        image: ghost		      #Nom de l'image (précis)
+        ports:
+        - containerPort: 2368	#Port utilisé
