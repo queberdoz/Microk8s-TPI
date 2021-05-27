@@ -1,0 +1,33 @@
+#clusterIP
+apiVersion: v1
+kind: Service
+metadata:
+  name: -
+spec:
+  selector:
+    app: -
+  type: ClusterIP
+  ports:
+  - port: -
+    targetPort: -
+  - port: -
+    targetPort: -
+
+---
+
+#NodePort
+apiVersion: v1
+kind: Service
+metadata:
+  name: -
+spec:
+  selector:
+    app: -
+  type: NodePort
+  ports:
+  - port: -
+    targetPort: -
+    nodePort: -
+  - port: -
+    targetPort: -
+    nodePort: -
