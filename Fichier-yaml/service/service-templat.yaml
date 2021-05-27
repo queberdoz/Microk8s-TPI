@@ -1,4 +1,4 @@
-#clusterIP
+#Mode ClusterIP
 apiVersion: v1
 kind: Service
 metadata:
@@ -15,7 +15,7 @@ spec:
 
 ---
 
-#NodePort
+#Mode NodePort
 apiVersion: v1
 kind: Service
 metadata:
