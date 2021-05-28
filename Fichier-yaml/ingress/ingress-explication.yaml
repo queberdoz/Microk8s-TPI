@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name:                                               #Donner un nom au service.Ex pour grafana: grafana-ingress
-  namespace:                                          #Namespace du service voulu: monitoring (par defaut c'est -> default)
+  name: nginx-ingress                                 #Donner un nom au service.Ex pour grafana: grafana-ingress
+  namespace: default                                  #Namespace du service voulu: monitoring (par defaut c'est -> default)
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host:                                             #Nom de l'URL. Ex: grafana.local
+  - host: nginx.local                                 #Nom de l'URL.
     http:
       paths:
-      - path:                                         #Si l'on veut un accès par le chemin :/xyz ou non : /
+      - path: /                                       #Si l'on veut un accès par le chemin :/xyz ou non : /
         pathType: Prefix
         backend:
           service:
-            name:                                     #Nom du service voulu: grafana
-            port:
-              number:                                 #Numéro du port: 3000
+            name: nginx-service                       #Nom du service voulu: grafana
+            port: 
+              number: 80                              #Numéro du port: 3000
