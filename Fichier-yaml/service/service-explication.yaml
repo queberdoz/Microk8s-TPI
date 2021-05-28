@@ -9,9 +9,7 @@ spec:
   type: ClusterIP             #Type de service voulu : NodePort ou ClusterIP
   ports:
   - port: 80                  #Port du pod/déploiement
-    targetPort: 80            #Port à exposé à l'intérieur du cluster (Souvent le même que le port du pod, par simplicité)
-  - port: 443                 #Répéter l'action autant de fois qu'il y a de port à explosé au cluster
-    targetPort: 443
+    targetPort: 80            #Port à exposé à l'intérieur du cluster (Souvent le même que le port du pod)
 
 ---
 
@@ -26,8 +24,5 @@ spec:
   type: NodePort              #Type de service voulu : NodePort ou ClusterIP
   ports:
   - port: 80                  #Port du pod/déploiement
-    targetPort: 80            #Port à exposé à l'intérieur du cluster (Souvent le même que le port du pod, par simplicité)
+    targetPort: 80            #Port à exposé à l'intérieur du cluster (Souvent le même que le port du pod)
     nodePort: 1300            #Port à exposé sur chacun des nodes du cluster (pour un accès depuis l'extérieur)
-  - port: 443                 #Répéter l'action autant de fois qu'il y a de port à explosé au cluster
-    targetPort: 443
-    nodePort: 1301

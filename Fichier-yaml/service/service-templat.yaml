@@ -10,8 +10,6 @@ spec:
   ports:
   - port: -
     targetPort: -
-  - port: -
-    targetPort: -
 
 ---
 
@@ -25,9 +23,6 @@ spec:
     app: -
   type: NodePort
   ports:
-  - port: -
-    targetPort: -
-    nodePort: -
   - port: -
     targetPort: -
     nodePort: -
