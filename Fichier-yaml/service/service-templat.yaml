@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: -
+  name: #
 spec:
   selector:
-    app: -
+    app: #
   type: ClusterIP
   ports:
-  - port: -
-    targetPort: -
+  - port: #
+    targetPort: #
 
 ---
 
@@ -17,12 +17,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: -
+  name: #
 spec:
   selector:
-    app: -
+    app: #
   type: NodePort
   ports:
-  - port: -
-    targetPort: -
-    nodePort: -
+  - port: #
+    targetPort: #
+    nodePort: #
