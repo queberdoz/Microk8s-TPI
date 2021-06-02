@@ -2,7 +2,11 @@ apiVersion: v1
 kind: Pod                  
 metadata:
   name: hello-world             #Nom du pod
+  labels:
+    app: hello-world            #Nom du label (Ce qui va être utilisé pour aider le service à connecter au pod)
 spec:
   containers:
   - name: hello-world           #Nom du conteneur
     image: hello-world:linux    #Nom détaillé de l'image
+    ports:
+      - containerPort: 80       #Numéro de port à ouvrir
