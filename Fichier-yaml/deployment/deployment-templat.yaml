@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: -
+  name: #
 spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-       maxSurge: -
-       maxUnavailable: -
-  replicas: -
+       maxSurge: #
+       maxUnavailable: #
+  replicas: #
   selector:
     matchLabels:
-      app: -
+      app: #
   template:
     metadata:
       labels:
-        app: -
+        app: #
     spec:
       containers:
-      - name: -
-        image: -
+      - name: #
+        image: #
         ports:
-        - containerPort: -
+        - containerPort: #

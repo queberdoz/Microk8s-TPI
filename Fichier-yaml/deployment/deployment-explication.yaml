@@ -18,7 +18,7 @@ spec:
         app: ghost		        #Nom du pod
     spec:
       containers:
-      - name: ghost		        #Nom du container
+      - name: ghost		        #Nom du conteneur
         image: ghost		      #Nom de l'image (précis)
         ports:
         - containerPort: 2368	#Port utilisé
