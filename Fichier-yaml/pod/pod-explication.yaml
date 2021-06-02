@@ -1,0 +1,8 @@
+apiVersion: v1             
+kind: Pod                  
+metadata:
+  name: hello-world             #Nom du pod
+spec:
+  containers:
+  - name: hello-world           #Nom du conteneur
+    image: hello-world:linux    #Nom détaillé de l'image
